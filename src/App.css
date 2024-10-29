@@ -1,38 +1,102 @@
-.App {
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+body {
+  background-color: #f8f9fa; /* Un gris claro de fondo */
+}
+
+h1, h2, h3 {
+  color: #343a40; /* Cambiar el color de los títulos */
+}
+
+/* Consolidación de las reglas de navbar */
+.navbar {
+  
+  background-color: #060606 !important; /* Color azul para la barra de navegación */
+  color: white !important;
+}
+
+.navbar-brand, .nav-link {
+  color: white !important;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important; /* Hover en los links del header */
+}
+
+.btn-primary {
+  background-color: #28a745; /* Color verde para los botones primarios */
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card:hover {
+  transform: scale(1.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card-img-top {
+  max-height: 300px;
+  object-fit: cover; /* Ajusta la imagen para que no se distorsione */
 }
 
-.App-link {
-  color: #61dafb;
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #343a40;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Checkout */
+.container {
+  margin-top: 20px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h2, h4, h5 {
+  color: #343a40;
+}
+
+button.btn-primary {
+  background-color: #28a745;
+  border: none;
+}
+
+button.btn-primary:hover {
+  background-color: #218838;
+}
+
+button {
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #218838; /* Cambiar color al pasar sobre el botón */
 }
