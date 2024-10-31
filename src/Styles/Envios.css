@@ -1,0 +1,47 @@
+.envios-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .envios-title {
+    font-size: 2rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .envios-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+  }
+  
+  .envios-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .envios-details h3,
+  .envios-section h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .envios-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .envios-section {
+    margin-top: 20px;
+  }
+  

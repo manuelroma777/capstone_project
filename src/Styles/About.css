@@ -1,0 +1,47 @@
+.about-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+  }
+  
+  .about-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+  }
+  
+  .about-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #495057;
+  }
+  
