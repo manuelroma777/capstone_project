@@ -34,8 +34,8 @@ function About() {
 
       <p className="about-text">
         En <strong>ShopNow</strong>, estamos construyendo un lugar donde la comodidad y la innovación se unen para
-        ofrecerte una experiencia de compra inigualable. Gracias por ser parte de este viaje; estamos aquí para servirte
-        y ayudarte a descubrir productos que realmente mejoren tu vida.
+        ofrecerte una experiencia de compra inigualable. Gracias por confiar en nosotros, estamos aquí para servirte
+        y ayudarte con productos que realmente mejoren tu calidad de vida.
       </p>
     </div>
   );

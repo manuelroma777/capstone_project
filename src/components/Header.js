@@ -17,7 +17,15 @@ function Header({ token, user, cart, setToken, setCart }) {
 
   return (
     <Navbar expand="lg">
-      <Navbar.Brand as={Link} to="/">ShopNow Store</Navbar.Brand>
+      {/* Sustituimos el texto con el logo */}
+      <Navbar.Brand as={Link} to="/">
+        <img 
+          src="/images/ShopNow-Logo.png" 
+          alt="ShopNow Logo" 
+          style={{ width: '50px', height: 'auto' }} // Ajuste de tamaño según sea necesario
+        />
+      </Navbar.Brand>
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
@@ -47,6 +55,56 @@ function Header({ token, user, cart, setToken, setCart }) {
 }
 
 export default Header;
+
+// import React from 'react';
+// import { Link, useNavigate } from 'react-router-dom';
+// import { Navbar, Nav, Button, Badge } from 'react-bootstrap';
+
+// function Header({ token, user, cart, setToken, setCart }) {
+//   const navigate = useNavigate();
+
+//   const handleLogout = () => {
+//     // Limpiar token, usuario y carrito
+//     localStorage.removeItem('token');
+//     localStorage.removeItem('user');
+//     localStorage.removeItem('cart');
+//     setToken(null);
+//     setCart([]);
+//     navigate("/login");
+//   };
+
+//   return (
+//     <Navbar expand="lg">
+//       <Navbar.Brand as={Link} to="/">ShopNow Store</Navbar.Brand>
+//       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//       <Navbar.Collapse id="basic-navbar-nav">
+//         <Nav className="ml-auto">
+//           <Nav.Link as={Link} to="/productos">Todos Los Productos</Nav.Link>
+//           <Nav.Link as={Link} to="/about">Acerca de Nosotros</Nav.Link>
+//           <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>
+//           <Nav.Link as={Link} to="/preguntas-frecuentes">Preguntas Frecuentes</Nav.Link> {/* Enlace a Preguntas Frecuentes */}
+//           <Nav.Link as={Link} to="/envios-gratis">Envíos Gratis</Nav.Link> {/* Enlace a Envíos Gratis */}
+
+//           {token ? (
+//             <>
+//               <Nav.Link>
+//                 {user ? `${user.first_name} ${user.last_name}` : ''} {/* Verificación de que user no sea null */}
+//               </Nav.Link>
+//               <Nav.Link as={Link} to="/carrito">
+//                 Carrito <Badge variant="secondary">{cart.length}</Badge> {/* Mostrar cantidad de productos */}
+//               </Nav.Link>
+//               <Button variant="outline-danger" onClick={handleLogout}>Cerrar sesión</Button>
+//             </>
+//           ) : (
+//             <Nav.Link as={Link} to="/login">Iniciar Sesión</Nav.Link>
+//           )}
+//         </Nav>
+//       </Navbar.Collapse>
+//     </Navbar>
+//   );
+// }
+
+// export default Header;
 
 // import React from 'react';
 // import { Link, useNavigate } from 'react-router-dom';

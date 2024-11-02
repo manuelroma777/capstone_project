@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import PromoBanner from './PromoBanner'; // Importa el componente PromoBanner
 
 function Home({ token, cart, setCart }) {  // Agregar cart y setCart como props
   const [products, setProducts] = useState([]);
@@ -26,7 +27,6 @@ function Home({ token, cart, setCart }) {  // Agregar cart y setCart como props
       window.alert('Por favor, inicia sesión para continuar con la compra.');
       navigate('/login');
     } else {
-      // Agregar el producto al carrito y actualizar el estado
       setCart([...cart, product]);
       window.alert(`${product.name} agregado al carrito.`);
     }
@@ -46,6 +46,9 @@ function Home({ token, cart, setCart }) {  // Agregar cart y setCart como props
 
   return (
     <Container className="mt-5">
+      {/* Agrega el componente PromoBanner en la parte superior */}
+      <PromoBanner />
+      
       <h2 className="text-center mb-4">Productos Destacados</h2>
       <Row>
         {products.length > 0 ? (
@@ -83,6 +86,92 @@ function Home({ token, cart, setCart }) {  // Agregar cart y setCart como props
 }
 
 export default Home;
+
+// import React, { useEffect, useState } from 'react';
+// import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+// import axios from 'axios';
+// import { useNavigate } from 'react-router-dom';
+
+// function Home({ token, cart, setCart }) {  // Agregar cart y setCart como props
+//   const [products, setProducts] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     axios.get('http://localhost:5000/products')
+//       .then(response => {
+//         setProducts(response.data);
+//         setLoading(false);
+//       })
+//       .catch(error => {
+//         setError('Hubo un error al obtener los productos.');
+//         setLoading(false);
+//       });
+//   }, []);
+
+//   const handleAddToCart = (product) => {
+//     if (!token) {
+//       window.alert('Por favor, inicia sesión para continuar con la compra.');
+//       navigate('/login');
+//     } else {
+//       // Agregar el producto al carrito y actualizar el estado
+//       setCart([...cart, product]);
+//       window.alert(`${product.name} agregado al carrito.`);
+//     }
+//   };
+
+//   const handleImageClick = (productId) => {
+//     navigate(`/productos/${productId}`);
+//   };
+
+//   if (loading) {
+//     return <div>Cargando productos...</div>;
+//   }
+
+//   if (error) {
+//     return <div>{error}</div>;
+//   }
+
+//   return (
+//     <Container className="mt-5">
+//       <h2 className="text-center mb-4">Productos Destacados</h2>
+//       <Row>
+//         {products.length > 0 ? (
+//           products.map(product => (
+//             <Col key={product.id} sm={12} md={6} lg={4} className="mb-4">
+//               <Card>
+//                 <Card.Img 
+//                   variant="top" 
+//                   src={product.image_url}  
+//                   alt={product.name} 
+//                   onClick={() => handleImageClick(product.id)}
+//                   onError={(e) => { e.target.src = "https://via.placeholder.com/150"; }}
+//                   style={{ cursor: 'pointer' }}
+//                 />
+//                 <Card.Body>
+//                   <Card.Title>{product.name}</Card.Title>
+//                   <Card.Text>
+//                     {product.description}
+//                     <br />
+//                     <strong>Precio: ${product.price}</strong>
+//                   </Card.Text>
+//                   <Button variant="primary" onClick={() => handleAddToCart(product)}>
+//                     Agregar al carrito
+//                   </Button>
+//                 </Card.Body>
+//               </Card>
+//             </Col>
+//           ))
+//         ) : (
+//           <p>No hay productos disponibles en este momento.</p>
+//         )}
+//       </Row>
+//     </Container>
+//   );
+// }
+
+// export default Home;
 
 // import React, { useEffect, useState } from 'react';
 // import { Container, Row, Col, Card, Button } from 'react-bootstrap';

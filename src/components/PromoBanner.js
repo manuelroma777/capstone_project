@@ -22,6 +22,24 @@ const PromoBanner = () => {
       image_url: 'https://i.postimg.cc/VkShLVwq/Tazas-Ceramica-1.jpg',  // URL específica de la imagen
       description: 'Oferta por tiempo limitado.',
     },
+    {
+      id: 4,
+      name: 'Set de 4 Copas',
+      image_url: 'https://i.postimg.cc/mDxWsGF1/Copas-1.jpg',  // URL específica de la imagen
+      description: 'Oferta por tiempo limitado.',
+    },
+    {
+      id: 5,
+      name: 'Set de 4 Platos',
+      image_url: 'https://i.postimg.cc/5NqDPmCw/Platos-1.jpg',  // URL específica de la imagen
+      description: '¡No te Pierdas esta Oferta por tiempo limitado!',
+    },
+    {
+      id: 6,
+      name: 'Secadora de Mano',
+      image_url: 'https://i.postimg.cc/WpZBZVpY/Secadora-1.jpg',  // URL específica de la imagen
+      description: 'Aprovecha la Oferta por tiempo limitado.',
+    },
   ];
   
 
