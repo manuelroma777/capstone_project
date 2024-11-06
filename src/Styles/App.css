@@ -33,7 +33,7 @@ h1, h2, h3 {
 }
 
 .nav-link:hover {
-  color: #ffc107 !important; /* Hover en los links del header */
+  color: #28a745 !important; /* Hover en los links del header */
 }
 
 .btn-primary {

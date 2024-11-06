@@ -32,6 +32,41 @@ function PreguntasFrecuentes() {
           Contáctanos lo antes posible para ayudarte con el cambio.
         </p>
       </div>
+
+      <div className="faq-section">
+        <h3>¿Cómo puedo rastrear mi pedido?</h3>
+        <p>
+          Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con un número de seguimiento y 
+          un enlace para rastrear tu paquete en tiempo real. Puedes consultar el estado de tu envío en cualquier 
+          momento usando ese enlace.
+        </p>
+      </div>
+
+      <div className="faq-section">
+        <h3>¿Ofrecen envío gratuito?</h3>
+        <p>
+          Sí, todos nuestros productos incluyen envío gratuito a nivel mundial sin importe mínimo de compra. 
+          Esto significa que puedes disfrutar de nuestros productos sin preocuparte por los costos adicionales de envío.
+        </p>
+      </div>
+
+      <div className="faq-section">
+        <h3>¿Puedo enviar mi pedido a una dirección diferente?</h3>
+        <p>
+        Sí, puedes especificar una dirección de envío diferente a la dirección de facturación durante 
+        el proceso de compra. Asegúrate de ingresar correctamente todos los detalles de la dirección 
+        para evitar problemas de entrega.
+        </p>
+      </div>
+
+      <div className="faq-section">
+        <h3>¿Qué debo hacer si mi pedido llega dañado o defectuoso?</h3>
+        <p>
+        Si recibes un producto dañado o defectuoso, contáctanos dentro de las 48 horas posteriores 
+        a la recepción del paquete a <a href="mailto:soporte@shopnow.com">soporte@shopnow.com</a> o al Teléfono: <a href="tel:+1234567890">+123 456 7890</a>. Te pediremos una foto del producto dañado y, tras la evaluación, 
+        te enviaremos un reemplazo o te reembolsaremos el importe, según prefieras.
+        </p>
+      </div>
     </div>
   );
 }

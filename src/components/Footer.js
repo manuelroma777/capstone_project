@@ -10,7 +10,7 @@ function Footer() {
         <Row>
           {/* Contacto */}
           <Col md={3}>
-            <h5>Contacto</h5>
+            <h5><Link to="/contact" className="footer-link">Contacto</Link></h5>
             <ul className="list-unstyled">
               <li>Email: <a href="mailto:soporte@shopnow.com">soporte@shopnow.com</a></li>
               <li>Teléfono: <a href="tel:+1234567890">+123 456 7890</a></li>
