@@ -29,44 +29,56 @@ def home():
 @app.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
-    # username = data.get('username')  # Asegúrate de obtener el 'username'
+    # Obtener los datos del usuario incluyendo los nuevos campos
     first_name = data.get('firstName')
     last_name = data.get('lastName')
     email = data.get('email')
     password = data.get('password')
+    calle = data.get('calle')
+    ciudad = data.get('ciudad')
+    comunidad = data.get('comunidad')
+    codigo_postal = data.get('codigoPostal')
+    pais = data.get('pais')
+    movil = data.get('movil')
 
     # Encriptar la contraseña
     hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
     cursor = db.cursor()
-    sql = "INSERT INTO users (first_name, last_name, email, password) VALUES (%s, %s, %s, %s)"
-    values = (first_name, last_name, email, hashed_password)
+    # Incluir los nuevos campos en la consulta SQL
+    sql = """
+        INSERT INTO users (first_name, last_name, email, password, calle, ciudad, comunidad, codigo_postal, pais, movil)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    """
+    values = (first_name, last_name, email, hashed_password, calle, ciudad, comunidad, codigo_postal, pais, movil)
     cursor.execute(sql, values)
     db.commit()
     cursor.close()
 
     return jsonify({"message": "Usuario registrado correctamente"}), 201
 
-# # Ruta para registrar un usuario
 # @app.route('/register', methods=['POST'])
 # def register():
 #     data = request.get_json()
-#     username = data.get('username')
+#     # username = data.get('username')  # Asegúrate de obtener el 'username'
+#     first_name = data.get('firstName')
+#     last_name = data.get('lastName')
+#     email = data.get('email')
 #     password = data.get('password')
 
 #     # Encriptar la contraseña
 #     hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
 #     cursor = db.cursor()
-#     sql = "INSERT INTO users (username, password) VALUES (%s, %s)"
-#     values = (username, hashed_password)
+#     sql = "INSERT INTO users (first_name, last_name, email, password) VALUES (%s, %s, %s, %s)"
+#     values = (first_name, last_name, email, hashed_password)
 #     cursor.execute(sql, values)
 #     db.commit()
 #     cursor.close()
 
 #     return jsonify({"message": "Usuario registrado correctamente"}), 201
 
-# Ruta para iniciar sesión y obtener el token JWT
+
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -88,31 +100,6 @@ def login():
     # Devolver el token y el nombre del usuario
     return jsonify({"token": access_token, "firstName": user['first_name']}), 200
 
-# @app.route('/login', methods=['POST'])
-# def login():
-#     data = request.get_json()
-#     email = data.get('email')  # Cambiado de 'username' a 'email'
-#     password = data.get('password')
-
-#     cursor = db.cursor(dictionary=True)
-#     cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
-#     user = cursor.fetchone()
-#     cursor.close()
-
-#     # Verificar si el usuario existe y si la contraseña es correcta
-#     if not user or not bcrypt.check_password_hash(user['password'], password):
-#         return jsonify({"message": "Credenciales inválidas"}), 401
-
-#     # Generar un token JWT
-#     access_token = create_access_token(identity=user['id'])
-#     return jsonify({"token": access_token}), 200
-
-    # if not user or not bcrypt.check_password_hash(user['password'], password):
-    #     return jsonify({"message": "Credenciales inválidas"}), 401
-
-    # # Generar un token JWT
-    # access_token = create_access_token(identity=user['id'])
-    # return jsonify({"token": access_token}), 200
 
 # Ruta protegida: Solo usuarios autenticados pueden acceder
 @app.route('/protected', methods=['GET'])

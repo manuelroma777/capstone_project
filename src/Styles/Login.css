@@ -1,0 +1,39 @@
+.login-container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-image-container {
+    text-align: center;
+  }
+  
+  .login-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .login-container {
+      margin-top: 20px;
+    }
+  
+    /* Orden para dispositivos móviles */
+    .login-image-container {
+      order: -1;
+      margin-bottom: 30px;
+    }
+  
+    .login-image {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+  

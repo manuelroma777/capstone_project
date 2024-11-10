@@ -58,7 +58,8 @@ function App() {
             <>
               <PromoBanner />
               <div className="container">
-                <h1>Todos Los Productos</h1>
+                <h1>LAS MEJORES MARCAS SIEMPRE</h1>
+                {/* <h1>para ti</h1> */}
                 <ProductList products={products} cart={cart} setCart={setCart} token={token} />
               </div>
             </>

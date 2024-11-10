@@ -73,11 +73,18 @@ h1, h2, h3 {
   color: #6c757d;
 }
 
-/* Checkout */
 .container {
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin-bottom: 0px;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
+
+}
+
+.container h1 {
+  margin-bottom: 3rem; /* Ajusta el valor para el espacio deseado */
+  text-align: center; /* Centrado del título */
+  color: #28a745; /* Color verde */
 }
 
 h2, h4, h5 {
@@ -85,8 +92,12 @@ h2, h4, h5 {
 }
 
 button.btn-primary {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;  
   background-color: #28a745;
   border: none;
+  border-top: 40px;
+  border-bottom: 40px;  
 }
 
 button.btn-primary:hover {

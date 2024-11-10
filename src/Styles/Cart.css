@@ -9,7 +9,7 @@
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
-    color: #343a40;
+    color: #28a742;
   }
   
   .cart-list {
@@ -35,6 +35,8 @@
   }
   
   .checkout-button {
+    margin-top: 20px;
+    margin-bottom: 40px;
     width: 100%;
     font-size: 1.2rem;
   }

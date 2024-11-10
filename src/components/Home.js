@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import PromoBanner from './PromoBanner'; // Importa el componente PromoBanner
+import "../Styles/Home.css"
 
 function Home({ token, cart, setCart }) {  // Agregar cart y setCart como props
   const [products, setProducts] = useState([]);
@@ -49,7 +50,7 @@ function Home({ token, cart, setCart }) {  // Agregar cart y setCart como props
       {/* Agrega el componente PromoBanner en la parte superior */}
       <PromoBanner />
       
-      <h2 className="text-center mb-4">Productos Destacados</h2>
+      <h2 className="text-center mb-4 section-title">SIEMPRE CON LOS MEJORES PRECIOS</h2>
       <Row>
         {products.length > 0 ? (
           products.map(product => (
