@@ -33,6 +33,11 @@ function Login({ setToken }) {
 
         {/* Columna para el formulario */}
         <Col md={6} className="order-md-2 order-1">
+          {/* Logo en la parte superior */}
+          <div className="text-center mb-3">
+            <img src="/images/ShopNow-Logo.png" alt="ShopNow Logo" className="login-logo" />
+          </div>
+          
           <h2 className="text-center mb-4">LOGIN</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="email" className="mb-3">
@@ -68,6 +73,77 @@ function Login({ setToken }) {
 }
 
 export default Login;
+
+// import React, { useState } from 'react';
+// import { useNavigate, Link } from 'react-router-dom';
+// import axios from 'axios';
+// import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+// import '../Styles/Login.css';
+
+// function Login({ setToken }) {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [error, setError] = useState('');
+//   const navigate = useNavigate();
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     axios.post('http://localhost:5000/login', { email, password })
+//       .then(response => {
+//         setToken(response.data.token);
+//         navigate('/productos');
+//       })
+//       .catch(error => {
+//         setError('Credenciales inválidas. Inténtalo de nuevo.');
+//         console.error(error);
+//       });
+//   };
+
+//   return (
+//     <Container className="login-container">
+//       <Row className="align-items-center">
+//         {/* Columna para la imagen */}
+//         <Col md={6} className="login-image-container order-md-1 order-2">
+//           <img src="/images/login.jpg" alt="Login" className="login-image" />
+//         </Col>
+
+//         {/* Columna para el formulario */}
+//         <Col md={6} className="order-md-2 order-1">
+//           <h2 className="text-center mb-4">LOGIN</h2>
+//           <Form onSubmit={handleSubmit}>
+//             <Form.Group controlId="email" className="mb-3">
+//               <Form.Label>Email</Form.Label>
+//               <Form.Control
+//                 type="email"
+//                 value={email}
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 required
+//               />
+//             </Form.Group>
+
+//             <Form.Group controlId="password" className="mb-3">
+//               <Form.Label>Contraseña</Form.Label>
+//               <Form.Control
+//                 type="password"
+//                 value={password}
+//                 onChange={(e) => setPassword(e.target.value)}
+//                 required
+//               />
+//             </Form.Group>
+
+//             {error && <p className="text-danger">{error}</p>}
+
+//             <Button variant="primary" type="submit" className="w-100">Iniciar Sesión</Button>
+//           </Form>
+
+//           <p className="mt-3 text-center">¿No tienes una cuenta? <Link to="/register">Regístrate aquí</Link></p>
+//         </Col>
+//       </Row>
+//     </Container>
+//   );
+// }
+
+// export default Login;
 
 // import React, { useState } from 'react';
 // import { useNavigate, Link } from 'react-router-dom';
