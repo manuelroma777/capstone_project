@@ -19,5 +19,31 @@
   .card:hover {
     transform: scale(1.03);
   }
+    
+  .card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 200px; /* Ajusta la altura a un tamaño consistente */
+    object-fit: cover; /* Mantiene la proporción de la imagen sin deformarla */
+    border-radius: 0.5rem; /* Opcional: Añade un borde redondeado para mejor estética */
+  }
   
   
+/* Garantizar que las columnas tengan el mismo alto */
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que las columnas se acomoden correctamente */
+  align-items: stretch; /* Hace que las tarjetas dentro de las columnas tengan la misma altura */
+}
+
+/* Asegurar consistencia en las columnas */
+.col-md-4, .col-lg-4 {
+  display: flex;
+  flex-direction: column; /* Asegura que las tarjetas dentro de cada columna sean consistentes */
+}
+
+/* Ajustes adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px; /* Reducir la altura para dispositivos móviles */
+  }
+}
