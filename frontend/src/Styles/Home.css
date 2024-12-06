@@ -25,8 +25,7 @@
     height: 200px; /* Ajusta la altura a un tamaño consistente */
     object-fit: cover; /* Mantiene la proporción de la imagen sin deformarla */
     border-radius: 0.5rem; /* Opcional: Añade un borde redondeado para mejor estética */
-  }
-  
+  }  
   
 /* Garantizar que las columnas tengan el mismo alto */
 .row {

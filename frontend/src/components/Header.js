@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Button, Badge } from 'react-bootstrap';
+import '../Styles/Header.css'; // Importamos el archivo CSS
 
 function Header({ token, user, cart, setToken, setCart }) {
   const navigate = useNavigate();
@@ -15,8 +16,7 @@ function Header({ token, user, cart, setToken, setCart }) {
   };
 
   return (
-    <Navbar expand="lg" bg="dark" variant="dark">
-      {/* Sustituimos el texto con el logo */}
+    <Navbar expand="lg" bg="dark" variant="dark" className="header-navbar">
       <Navbar.Brand as={Link} to="/">
         <img 
           src="/images/ShopNow-Logo.png" 
@@ -27,6 +27,7 @@ function Header({ token, user, cart, setToken, setCart }) {
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
+        {/* Sección principal de enlaces */}
         <Nav className="mr-auto">
           <Nav.Link as={Link} to="/productos">Todos Los Productos</Nav.Link>
           <Nav.Link as={Link} to="/about">Acerca de Nosotros</Nav.Link>
@@ -35,8 +36,8 @@ function Header({ token, user, cart, setToken, setCart }) {
           <Nav.Link as={Link} to="/envios-gratis">Envíos Gratis</Nav.Link>
         </Nav>
 
-        {/* Mueve la sección de login al final */}
-        <Nav className="ml-auto">
+        {/* Sección de login, carrito, y logout */}
+        <Nav className="ml-auto header-login">
           {token ? (
             <>
               <Nav.Link>
@@ -57,6 +58,66 @@ function Header({ token, user, cart, setToken, setCart }) {
 }
 
 export default Header;
+
+// import React from 'react';
+// import { Link, useNavigate } from 'react-router-dom';
+// import { Navbar, Nav, Button, Badge } from 'react-bootstrap';
+
+// function Header({ token, user, cart, setToken, setCart }) {
+//   const navigate = useNavigate();
+
+//   const handleLogout = () => {
+//     localStorage.removeItem('token');
+//     localStorage.removeItem('user');
+//     localStorage.removeItem('cart');
+//     setToken(null);
+//     setCart([]);
+//     navigate("/login");
+//   };
+
+//   return (
+//     <Navbar expand="lg" bg="dark" variant="dark">
+//       {/* Sustituimos el texto con el logo */}
+//       <Navbar.Brand as={Link} to="/">
+//         <img 
+//           src="/images/ShopNow-Logo.png" 
+//           alt="ShopNow Logo" 
+//           style={{ width: '50px', height: 'auto' }}
+//         />
+//       </Navbar.Brand>
+
+//       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//       <Navbar.Collapse id="basic-navbar-nav">
+//         <Nav className="mr-auto">
+//           <Nav.Link as={Link} to="/productos">Todos Los Productos</Nav.Link>
+//           <Nav.Link as={Link} to="/about">Acerca de Nosotros</Nav.Link>
+//           <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>
+//           <Nav.Link as={Link} to="/preguntas-frecuentes">Preguntas Frecuentes</Nav.Link>
+//           <Nav.Link as={Link} to="/envios-gratis">Envíos Gratis</Nav.Link>
+//         </Nav>
+
+//         {/* Mueve la sección de login al final */}
+//         <Nav className="ml-auto">
+//           {token ? (
+//             <>
+//               <Nav.Link>
+//                 {user ? `${user.first_name} ${user.last_name}` : ''}
+//               </Nav.Link>
+//               <Nav.Link as={Link} to="/carrito">
+//                 Carrito <Badge variant="secondary">{cart.length}</Badge>
+//               </Nav.Link>
+//               <Button variant="outline-danger" onClick={handleLogout}>Cerrar sesión</Button>
+//             </>
+//           ) : (
+//             <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
+//           )}
+//         </Nav>
+//       </Navbar.Collapse>
+//     </Navbar>
+//   );
+// }
+
+// export default Header;
 
 // import React from 'react';
 // import { Link, useNavigate } from 'react-router-dom';

@@ -1,0 +1,28 @@
+.header-navbar {
+    padding: 0.5rem 1rem; /* Ajuste de espaciado global */
+  }
+  
+  .header-login {
+    margin-left: auto; /* Asegura que el contenido esté justificado a la derecha */
+    display: flex;
+    align-items: center; /* Centrado vertical para botones y enlaces */
+    gap: 1rem; /* Espacio entre los elementos */
+  }
+  
+  .header-login a,
+  .header-login button {
+    color: white; /* Color blanco para los enlaces y botones */
+    text-decoration: none;
+  }
+  
+  .header-login a:hover,
+  .header-login button:hover {
+    color: #28a745; /* Cambia el color al pasar el ratón */
+    text-decoration: underline;
+  }
+  
+  .navbar-brand img {
+    max-height: 40px; /* Ajustar tamaño del logo */
+    margin-right: 1rem; /* Espaciado entre el logo y los enlaces */
+  }
+  
