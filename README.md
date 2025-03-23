@@ -29,8 +29,8 @@ ShopNow combina un frontend en React y un backend en Python (Flask), con conexi�
 
 ## 🌐 URLs del Proyecto
 
-- 🔗 **Frontend (Vercel)**: [https://shopnow-frontend.vercel.app](https://shopnow-frontend.vercel.app)
-- 🔗 **Backend (Render)**: [https://shopnow-backend.onrender.com](https://shopnow-backend.onrender.com)
+- 🔗 **Frontend **: https://github.com/manuelroma777/capstone_project/tree/main/frontend
+- 🔗 **Backend **: https://github.com/manuelroma777/capstone_project/tree/main/backend
 
 > ⚠️ La base de datos está alojada localmente en MySQL Workbench, por lo que la API no estará completamente funcional en producción a menos que se configure una base de datos remota como **PlanetScale** o **Render PostgreSQL**.
 
