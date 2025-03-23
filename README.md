@@ -53,7 +53,8 @@ ShopNow combina un frontend en React y un backend en Python (Flask), con conexi�
 Usuario de prueba: test@demo.com  
 Contraseña: Test1234
 
-## Estructura del Repositorio
+
+Estructura del Repositorio
 capstone_project/
 │
 ├── frontend/             → React app
@@ -86,7 +87,7 @@ Luis Manuel Vásquez Roma
 Email: manuelroma333@hotmail.es
 GitHub: @manuelroma777
 
- Notas Finales
+Notas Finales
 Para producción, se recomienda migrar la base de datos a un servicio cloud como PlanetScale, Railway o Render PostgreSQL.
 
 Se aceptan sugerencias para mejorar el proyecto. ¡Gracias por visitar ShopNow!
