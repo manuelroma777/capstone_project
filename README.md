@@ -4,14 +4,14 @@
 
 ## 🖼️ Vista Previa
 
-### 🖼️ Banner Promocional
-![Banner ShopNow](frontend/public/images/banner-shopnow.png)
+### 🖼️ Las Mejores Marcas
+![Banner ShopNow](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%201.png).
 
 ### 🛒 Productos Destacados
-![Productos Destacados](frontend/public/images/productos-destacados.png)
+![Productos Destacados](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%201.png).
 
 ### 🔐 Formulario de Login
-![Login Form ShopNow](frontend/public/images/login-form-shopnow.png)
+![Login Form ShopNow](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%20-%20Login.png)
 
 ---
 
