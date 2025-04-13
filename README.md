@@ -2,6 +2,19 @@
 
 **ShopNow** es una aplicación de comercio electrónico desarrollada como proyecto final del curso Full Stack Developer. Permite a los usuarios navegar por productos, registrarse, iniciar sesión, agregar productos al carrito y realizar pedidos.
 
+## 🖼️ Vista Previa
+
+### 🖼️ Banner Promocional
+![Banner ShopNow](frontend/public/images/banner-shopnow.png)
+
+### 🛒 Productos Destacados
+![Productos Destacados](frontend/public/images/productos-destacados.png)
+
+### 🔐 Formulario de Login
+![Login Form ShopNow](frontend/public/images/login-form-shopnow.png)
+
+---
+
 ## 📌 Descripción General
 
 ShopNow combina un frontend en React y un backend en Python (Flask), con conexión a una base de datos MySQL. Ofrece una experiencia de usuario intuitiva y adaptada a dispositivos móviles.
