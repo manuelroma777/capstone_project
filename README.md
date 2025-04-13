@@ -2,9 +2,7 @@
 
 **ShopNow** es una aplicación de comercio electrónico desarrollada como proyecto final del curso Full Stack Developer. Permite a los usuarios navegar por productos, registrarse, iniciar sesión, agregar productos al carrito y realizar pedidos.
 
-## 🖼️ Vista Previa
-
-### 🖼️ Las Mejores Marcas
+### 🛒 Las Mejores Marcas
 ![Banner ShopNow](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%201.png).
 
 ### 🛒 Productos Destacados
