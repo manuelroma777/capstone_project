@@ -5,8 +5,8 @@
 ### 🛒 Las Mejores Marcas
 ![Banner ShopNow](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%201.png).
 
-### 🛒 Productos Destacados
-![Productos Destacados](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%201.png).
+### 🛒 Acerca de nosotros
+![Acerca de Nosotros](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%202.png).
 
 ### 🔐 Formulario de Login
 ![Login Form ShopNow](https://raw.githubusercontent.com/manuelroma777/capstone_project/refs/heads/main/frontend/public/images/ShopNow%20-%20Login.png)
